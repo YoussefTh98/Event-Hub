@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+main {
+  flex: 1;
+  padding: 24px;
+}
+
+.attente-pied-page {
+  min-height: 120px;
+}

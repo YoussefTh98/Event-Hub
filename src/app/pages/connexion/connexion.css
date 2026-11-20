@@ -1,0 +1,41 @@
+.connexion {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 24px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+h1 {
+  color: #4338ca;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+input,
+button {
+  padding: 12px;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input {
+  min-width: 0;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4338ca;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.erreur {
+  margin: 0;
+  color: #b91c1c;
+}

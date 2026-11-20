@@ -1,0 +1,11 @@
+<h1>Mes réservations</h1>
+<p>
+  Nombre de réservations :
+  {{ reservations.nombreReservations() }}
+</p>
+
+@if (reservations.nombreReservations() === 0) {
+  <p>Vous n’avez aucune réservation.</p>
+}
+
+<p>La gestion complète des réservations sera ajoutée plus tard.</p>

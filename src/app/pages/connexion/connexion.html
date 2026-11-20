@@ -1,0 +1,41 @@
+<section class="connexion">
+  <h1>Connexion</h1>
+
+  <form [formGroup]="formulaire" (ngSubmit)="connecter()">
+    <label for="email">E-mail</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      autocomplete="username"
+    />
+
+    @if (
+      formulaire.controls.email.invalid &&
+      formulaire.controls.email.touched
+    ) {
+      <p class="erreur">Saisissez un e-mail valide.</p>
+    }
+
+    <label for="mot-de-passe">Mot de passe</label>
+    <input
+      id="mot-de-passe"
+      type="password"
+      formControlName="motDePasse"
+      autocomplete="current-password"
+    />
+
+    @if (
+      formulaire.controls.motDePasse.invalid &&
+      formulaire.controls.motDePasse.touched
+    ) {
+      <p class="erreur">Le mot de passe est obligatoire.</p>
+    }
+
+    @if (erreur()) {
+      <p class="erreur" role="alert">{{ erreur() }}</p>
+    }
+
+    <button type="submit">Se connecter</button>
+  </form>
+</section>

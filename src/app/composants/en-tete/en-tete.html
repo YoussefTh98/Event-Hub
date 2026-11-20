@@ -1,0 +1,35 @@
+<header>
+  <a class="logo" routerLink="/evenements">EventHub</a>
+
+  <nav aria-label="Navigation principale">
+    <a
+      routerLink="/evenements"
+      routerLinkActive="actif"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Événements
+    </a>
+
+    @if (session.utilisateur(); as utilisateur) {
+      <a routerLink="/mes-reservations" routerLinkActive="actif">
+        Mes réservations ({{ reservations.nombreReservations() }})
+      </a>
+
+      @if (utilisateur.role === 'organisateur') {
+        <a routerLink="/organisateur/nouveau" routerLinkActive="actif">
+          Nouvel événement
+        </a>
+      }
+
+      <span>{{ utilisateur.nom }}</span>
+
+      <button type="button" (click)="deconnecter()">
+        Déconnexion
+      </button>
+    } @else {
+      <a routerLink="/connexion" routerLinkActive="actif">
+        Connexion
+      </a>
+    }
+  </nav>
+</header>

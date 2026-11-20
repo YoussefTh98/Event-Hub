@@ -1,0 +1,10 @@
+<app-en-tete />
+<main>
+  <router-outlet />
+</main>
+
+@defer (on viewport) {
+  <app-pied-page />
+} @placeholder {
+  <div class="attente-pied-page" aria-hidden="true"></div>
+}
