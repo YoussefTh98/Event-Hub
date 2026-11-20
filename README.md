@@ -1,59 +1,79 @@
 # EventHub
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.3.0.
+Application web de gestion d'événements et de réservations, développée avec **Angular** (côté client).
 
-## Development server
+## Fonctionnalités
 
-To start a local development server, run:
+- Connexion d'un utilisateur
+- Liste des événements
+- Détail d'un événement
+- Création d'un nouvel événement
+- Réservation d'une place à un événement
+- Consultation de ses réservations
+- Page « introuvable » pour les routes inconnues
+
+## Technologies
+
+- Angular
+- TypeScript
+- HTML / CSS
+- Node.js et npm
+
+## Structure du projet
+
+```
+src/
+└── app/
+    ├── composants/     # composants réutilisables (ex. en-tête)
+    ├── donnees/        # données de l'application
+    ├── modeles/        # modèles : evenement, reservation, utilisateur
+    ├── pages/          # connexion, liste, detail, nouvel-evenement,
+    │                   # reservation, mes-reservations, introuvable
+    ├── services/       # services (session, evenements, reservations)
+    ├── app.routes.ts   # routes de l'application
+    └── app.config.ts   # configuration de l'application
+```
+
+## Installation
+
+1. Cloner le dépôt :
+
+```bash
+git clone https://github.com/YoussefTh98/EventHub.git
+cd EventHub
+```
+
+2. Installer les dépendances :
+
+```bash
+npm install
+```
+
+## Lancer l'application
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Puis ouvrir [http://localhost:4200](http://localhost:4200) dans le navigateur.
 
-## Code scaffolding
+## Commandes utiles
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Commande   | Description                          |
+|------------|--------------------------------------|
+| `ng serve` | Lance le serveur de développement    |
+| `ng build` | Génère la version de production      |
+| `ng test`  | Lance les tests unitaires            |
 
-```bash
-ng generate component component-name
+## Conventions de commit
+
+Les messages de commit commencent par le numéro de la tâche :
+
+```
+EF-01 : Structure générale de l'application
+EF-01 : mise à jour du README
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Auteur
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Projet réalisé dans le cadre du cours « Framework côté client (Angular) » — 2ème Licence DSI, ISET.
